@@ -1,0 +1,4 @@
+en:
+  activerecord:
+    messages:
+      uniqueness: "Record not uniq"

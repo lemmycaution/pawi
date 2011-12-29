@@ -1,0 +1,52 @@
+= Pawi
+
+Multilingual page management gem for Rails 3.1.1
+
+== Installation
+
+# Gemfile
+ gem 'pawi', :git => 'git://github.com/lemmycaution/pawi.git'
+
+install bundle
+ $> bundle
+Then run the installer
+ $> rails generate pawi:install
+or if you don't want the routing filter from sven fuchs wich doesn't work with routing constraints
+ $> rails generate pawi:install routingfilter=false
+migrate the database
+ $> bundle exec rake db:migrate
+
+== Usage
+
+*Page*
+Main object for rendering html pages, route to pages/#{slug} to view page, also you can use page_path or page_url helpers as usual
+
+*Widget*
+create and add widgets for reusable layouts for individual pages
+
+*Rendering*
+pawi interprets erb before rendering, so you can freely write ERB in the body field for example
+ hello <%= user.name %>
+
+*Cache*
+pawi uses rails built in page_cache feature, to enabling it on heroku cedar stack look at http://devcenter.heroku.com/articles/http-routing and  http://www.saturnflyer.com/blog/jim/2010/06/24/rack-cache-on-heroku-with-memcached/
+
+== Administration/Customization
+
+To administrate pages you can use active admin (https://github.com/gregbell/active_admin)
+then run admin generator
+ $> rails generate pawi:admin
+
+head to :locale/admin/pawi_pages to edit localized content
+
+but if you don't want to use active admin, there is only two model you have to deal; *Pawi::Page* and *Pawi::Widget*. Look into app/models for more details
+
+To customize show template generate views
+ $> rails generate pawi:views
+
+== Uses
+
+active admin https://github.com/gregbell/active_admin
+globalize3 https://github.com/svenfuchs/globalize3
+routing-filter https://github.com/svenfuchs/routing-filter
+ace https://github.com/ajaxorg/ace/

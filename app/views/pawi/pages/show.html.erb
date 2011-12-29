@@ -1,0 +1,10 @@
+<section class="page" id="<%=@page.slug%>">
+	<article>
+		<%== render_page @page %>	
+	</article>
+	<% unless @page.widgets.empty?%>
+	<aside>
+		<%== render_widgets @page %>
+	</aside>
+	<% end %>
+</section>
