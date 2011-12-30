@@ -3,6 +3,9 @@ require "pawi/sweeper"
 
 module Pawi
   
+  @@default_format = "html"
+  mattr_accessor :default_format
+  
   module Controller
     
     extend ActiveSupport::Concern

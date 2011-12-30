@@ -1,6 +1,8 @@
 module Pawi
   module PagesHelper
     
+    include Rails.application.routes.url_helpers
+    
     def render_page(page)
       get_content(page) || ""
     end

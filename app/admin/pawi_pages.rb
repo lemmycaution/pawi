@@ -10,8 +10,8 @@ ActiveAdmin.register Pawi::Page do
     column :id
     column :format    
     column :name, :sortable => :name
-    column :created_at, :sortable => :name
-    column :updated_at, :sortable => :name
+    column :created_at, :sortable => :created_at
+    column :updated_at, :sortable => :updated_at
     default_actions
   end
   

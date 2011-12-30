@@ -6,13 +6,14 @@ module Pawi
       argument :activeadmin, :type => :string, :default => "true"      
       
       def add_gems
-        gem 'globalize3'
+        # gem 'globalize3'
         gem 'routing-filter' if Boolean(routingfilter)
-        gem 'activeadmin' if Boolean(activeadmin)
+        # gem 'activeadmin' if Boolean(activeadmin)
       end
       
       def setup_routes
-        route 'mount Pawi::Engine => "/"'
+        # route 'mount Pawi::Engine => "/"'
+        route 'resources :pages, :only => [:show], :module => "pawi"'
         route "filter :locale" if Boolean(routingfilter)
       end
       

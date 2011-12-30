@@ -4,8 +4,9 @@ module Pawi
     caches_page :show
 
     def show
-
+      
       format = "#{request.format.to_sym}"
+      format = Pawi.default_format if format=="json" or format=="xml"
 
       @page = Page.find_by_slug_and_format(params[:id],format)
 

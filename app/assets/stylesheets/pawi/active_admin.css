@@ -1,0 +1,11 @@
+#pawi_page_body_ace,#pawi_widget_body_ace{
+	position:relative;
+	width:77.8%;
+	height:400px;
+}
+#pawi_page_widgets_input{
+	padding-bottom:20px;
+}
+label[for=pawi_page_body],label[for=pawi_widget_body]{
+	margin-bottom: 400px;
+}
