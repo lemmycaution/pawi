@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'globalize3'
   s.add_dependency 'routing-filter'  
   s.add_dependency 'activeadmin'
+  s.add_dependency 'tinymce-rails'  
 
   s.add_development_dependency "sqlite3"
 end

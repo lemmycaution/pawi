@@ -1,11 +1,22 @@
-#pawi_page_body_ace,#pawi_widget_body_ace{
-	position:relative;
+.ace_editor{
+	position:relative !important;
 	width:77.8%;
 	height:400px;
+	display:none;
 }
 #pawi_page_widgets_input{
 	padding-bottom:20px;
 }
 label[for=pawi_page_body],label[for=pawi_widget_body]{
 	margin-bottom: 400px;
+}
+.switches a{
+	padding:7px 5px;
+	border:1px solid #e4e4e4;
+	text-decoration:none;
+	cursor:pointer;
+	display:inline-block;
+}
+.switches a.active{
+	background:#fff;
 }

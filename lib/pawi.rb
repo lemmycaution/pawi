@@ -5,6 +5,8 @@ module Pawi
   
   @@default_format = "html"
   mattr_accessor :default_format
+  @@available_formats = %w( html mobile mail)
+  mattr_accessor :available_formats
   
   module Controller
     

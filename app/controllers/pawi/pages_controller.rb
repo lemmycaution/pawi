@@ -6,7 +6,7 @@ module Pawi
     def show
       
       format = "#{request.format.to_sym}"
-      format = Pawi.default_format if format=="json" or format=="xml"
+      format = Pawi.default_format unless Pawi.available_formats.include?(format)
 
       @page = Page.find_by_slug_and_format(params[:id],format)
 

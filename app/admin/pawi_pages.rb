@@ -1,6 +1,6 @@
 ActiveAdmin.register Pawi::Page do
   
-  menu :parent => "Pawi"
+  menu :parent => "Content"
   
   controller do
     cache_sweeper Pawi::Sweeper
