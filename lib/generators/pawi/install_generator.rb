@@ -8,6 +8,7 @@ module Pawi
       def add_gems
         # gem 'globalize3'
         gem 'routing-filter' if Boolean(routingfilter)
+        gem "tinymce-rails"
         # gem 'activeadmin' if Boolean(activeadmin)
       end
       
