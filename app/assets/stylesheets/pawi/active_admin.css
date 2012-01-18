@@ -1,3 +1,6 @@
+/*
+*= require tinymce
+*/
 .ace_editor{
 	position:relative !important;
 	width:77.8%;
