@@ -28,6 +28,7 @@ module Pawi
     end
     
     def expire_cache(object)
+      expire_page "/"      
       expire_page "/pages/#{object.slug}"
       I18n.available_locales.each do |locale|
         expire_page "#{locale}/pages/#{object.slug}"
