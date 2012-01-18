@@ -1,5 +1,5 @@
 /*
-*= require tinymce
+*= require_directory ./tinymce
 */
 .ace_editor{
 	position:relative !important;
