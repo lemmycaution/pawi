@@ -1,3 +1,3 @@
 module Pawi
-  VERSION = "0.0.41"
+  VERSION = "0.0.5"
 end
