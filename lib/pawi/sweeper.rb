@@ -21,7 +21,8 @@ module Pawi
       if object.class==Pawi::Page
         expire_cache(object)
       else
-        object.pages.each do |p|
+        pages = object.pages.empty? : Pawi::Page.all : object.pages
+        pages.each do |p|
           expire_cache(p)
         end
       end
