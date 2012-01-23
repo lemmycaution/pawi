@@ -18,10 +18,11 @@ module Pawi
     private
   
     def expire_cache_for(object)
+      expire_page "/" 
       if object.class==Pawi::Page
         expire_cache(object)
       else
-        pages = object.pages.empty? : Pawi::Page.all : object.pages
+        pages = object.pages.empty? ? Pawi::Page.all : object.pages
         pages.each do |p|
           expire_cache(p)
         end
@@ -29,7 +30,6 @@ module Pawi
     end
     
     def expire_cache(object)
-      expire_page "/"      
       expire_page "/pages/#{object.slug}"
       I18n.available_locales.each do |locale|
         expire_page "#{locale}/pages/#{object.slug}"
