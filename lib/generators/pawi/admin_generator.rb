@@ -2,7 +2,8 @@ module Pawi
   module Generators
     class AdminGenerator < Rails::Generators::Base
 
-      source_root File.expand_path("../../../../app/admin", __FILE__)
+      # source_root File.expand_path("../../../../app/admin", __FILE__)
+      source_root File.expand_path("../../templates/admin", __FILE__)      
       public_task :copy_views
 
       def copy_views
