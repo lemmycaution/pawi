@@ -5,6 +5,8 @@ module Pawi
 
     def show
       
+      response.headers['Cache-Control'] = 'no-cache'
+      
       format = "#{request.format.to_sym}"
       format = Pawi.default_format unless Pawi.available_formats.include?(format)
 
